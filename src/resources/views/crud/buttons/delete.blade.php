@@ -37,6 +37,8 @@
 							  }
 
 							  crud.table.draw(false);
+						  }else{
+							  window.location.href = '{{url()->previous()}}';
 						  }
 
 			          	  // Show a success notification bubble

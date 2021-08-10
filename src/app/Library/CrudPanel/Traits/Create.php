@@ -128,6 +128,11 @@ trait Create
                             $pivot_data[$pivot_field_name] = $data[$pivot_field_name][$pivot_id];
                         }
                     }
+
+                    if (isset($field['pivot_additional_fields'])) {
+                        $pivot_data = array_merge($pivot_data, $field['pivot_additional_fields']);
+                    }
+
                     $relation_data[$pivot_id] = $pivot_data;
                 }
 
